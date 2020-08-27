@@ -4,8 +4,9 @@
 # https://apscheduler.readthedocs.io/en/stable/userguide.html
 # https://stackoverflow.com/questions/373335/how-do-i-get-a-cron-like-scheduler-in-python
 
-# %run scheduler.py doesnt work there is just no way to kill the program
-# JUST COPY THE ENTIRE THING IN IPYTHON AND RUN IT ... LET IT RUN
+# %run scheduler.py ~~doesnt work there is just no way to kill the program~~
+# ~~JUST COPY THE ENTIRE THING IN IPYTHON AND RUN IT ... LET IT RUN~~
+
 import os
 import schedule
 from datetime import datetime
