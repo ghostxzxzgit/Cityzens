@@ -7,14 +7,19 @@
 # %run scheduler.py doesnt work there is just no way to kill the program
 # JUST COPY THE ENTIRE THING IN IPYTHON AND RUN IT ... LET IT RUN
 import os
-from apscheduler.schedulers.blocking import BlockingScheduler
-
+import schedule
+from datetime import datetime
 
 os.chdir(r"G:/Coding/Projects/City")
 print(os.getcwd())
-def job():
-    !python main.py
 
-scheduler = BlockingScheduler()
-scheduler.add_job(job,"interval", hours = 1)
-scheduler.start()
+
+def job():
+    print("Starting execution :", datetime.now().time())
+    exec(open('main.py').read())
+
+
+schedule.every(1).hour.do(job)
+job()
+while True:
+    schedule.run_pending()

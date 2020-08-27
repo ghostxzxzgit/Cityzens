@@ -46,7 +46,10 @@ def get_follower_data():
         print("Reddit subscribers :", intnumber)
         FollowerData.append(intnumber)
     except selenium.common.exceptions.NoSuchElementException:
-        pass
+        followers = webdriver.find_element_by_xpath("//div[@class='_3XFx6CfPlg-4Usgxm0gK8R']")
+        intnumber = parse_numbers(followers.text)
+        print("Reddit subscribers :", intnumber)
+        FollowerData.append(intnumber)
 
     youtube = "https://www.youtube.com/channel/UCkzCjdRMrW2vXLx8mvPVLdQ"
 
