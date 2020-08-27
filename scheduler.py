@@ -20,7 +20,7 @@ def job():
     exec(open('main.py').read())
 
 
-schedule.every(1).hour.do(job)
+schedule.every(4).hours.do(job)
 job()
 while True:
     schedule.run_pending()
