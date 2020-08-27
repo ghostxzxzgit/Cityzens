@@ -107,11 +107,13 @@ def get_follower_data():
 
 
 def write_data(FollowerData):
-    fhand = open("FollowerData.csv", "a")
+    file = "FollowerData.csv"
+    fhand = open(file, "a")
     fhand.write(str(datetime.now()))
     for i in FollowerData:
         fhand.write(",")
         fhand.write(str(i))
-    fhand.write("\"")
+    fhand.write("\n")
+
     fhand.close()
     return 1
