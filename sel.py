@@ -12,7 +12,7 @@ def get_follower_data(FollowerData):
     print(userAgent)
     options.add_argument(f'user-agent={userAgent}')
 
-    chromedriver_path = 'C:/Users/unitel/Downloads/chromedriver.exe'  # Change this to your own chromedriver path!
+    chromedriver_path = 'G:/Coding/chromedriver.exe' # Change this to your own chromedriver path!
     webdriver = webdriver.Chrome(chrome_options = options, executable_path = chromedriver_path)
     print("Manchester City Social Media Following")
 
